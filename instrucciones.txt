@@ -1,0 +1,57 @@
+Instrucciones para trabajar con el sistema en git:
+*en mi servidor de xampp, en la carpeta htdocs copie tal cual la carpeta de codeigniter para que si gustan hagan lo mismo y no se compliquen la vida :)
+
+1.-Llenar el registro de actividades en /planeacion/Registro_Actividades_Sistema.xlsx
+2.-Hacer pull y tomar del repositorio la última versión del sistema.
+3.-Subirla a sus servidores xampp locales.
+4.-Guardar cambios en sus servidores locales y una vez que funciona copiar solo el o los archivos modificados y
+sustituir en el repositorio los archivos que se modificaron. 
+5.-Anotar hora final y subir al repositorio en git el registro de sus actividades
+
+Ejemplo:
+registro mi tiempo inicial en hora inicio 2:00pm
+hago el pull en mi repositorio local
+mirepo$ git pull
+mi repositorio local se actualiza con la última versión del repositorio git en línea
+copio de mi repositorio local a mi servidor xampp y abro index.php -> 
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p>hola</p>
+
+</body>
+</html>
+
+ modifico un par de líneas ->
+
+<html>
+<head>
+	<title>Pongo titulo a la página</title>
+</head>
+<body>
+
+<p>hola, bienvenido al sistema</p>
+<p>Favor de autenticarse</p>
+
+</body>
+</html>
+
+guardo en mi servidor xampp (si ya funciona) y copio a mi repositorio local en git, sustituyendo el anterior index.php
+ejecuto
+mirepo$ git add index.php
+mirepo$ git commit -m "Actualización del index, Mi_Nombre"
+mirepo$ git push
+
+anoto mi hora de finalización en el registro 4:00pm y guardo el .xlsx
+ejecuto en git:
+mirepo$ git add /planeacion/Registro_Actividades_Sistema.xlsx
+mirepo$ git commit -m "Actualización del registro de tiempos, Mi_Nombre"
+mirepo$ git push
+
+dudas o aclaraciones, comentarios, sugerencias favor de anotarlas, recuerden que las revisiones son cada domingo y las entregas cada martes
+si se detienen en alguna cosa avisen para que entre todos nos apoyemos y esto quede
+estoy pendiente tanto en w.app como en mi correo de gmail para cualquier aclaración o duda
+gracias por su atención y por tomarse el tiempo de leer estas instrucciones :)
