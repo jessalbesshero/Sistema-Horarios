@@ -1,10 +1,12 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<title>Sistema administración  horarios</title>
-
-	<style type="text/css">
+<style type="text/css">
 
 	::selection{ background-color: #E13300; color: white; }
 	::moz-selection{ background-color: #E13300; color: white; }
@@ -124,20 +126,6 @@ form.login div input[type="submit"] {
 <div id="container">
 	<h1>Bienvenido a sistema horarios</h1>
 
-	
-
-<form action="principal.php" method="post" class="login">
-    <title> INICIO</title>
-    <h1>Iniciar sesión</h1>
-    <footer>&copy; Sistema</footer>
-    <div><label>Usuario:</label><input name="user" type="text" ></div>
-    <div><label>Contraseña:</label><input name="password" type="password"></div>
-    <div><input name="login" type="submit" value="Ingresar"></div>
-    <div><a href=registrar.php>Registrarse</a></div>
-    <a href=Invitado.php>Invitado</a>
- 
-</form>
-
 <div id="body">
 		<p>Sistema creado en la UV por estudiantes de la Licenciatura en Informática:</p>
 		<p>@Sirio</p>
@@ -151,30 +139,3 @@ form.login div input[type="submit"] {
 
 </body>
 </html>
-
-<?php
-session_start();
-                    if(isset($_SESSION['errorLogeo'])){
-                        $error = "";
-                        switch ($_SESSION['errorLogeo']) {
-                            case 1:
-                            echo"<script>alert('Usted no ha ingresado datos')</script>";
-                               
-                                break;
-                            case 2:
-                            echo"<script>alert('Los datos de la cuenta no son correctos')</script>";
-                        
-                                break;
-                            case 3:
-                                echo"<script>alert('Verifique su conexión')</script>";
-                                break;
-                            default:
-                                echo "<label>  </label>";
-                                break;
-                        }
-                        session_destroy();
-                    }
-
-  
-
-?>
